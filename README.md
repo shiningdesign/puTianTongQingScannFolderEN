@@ -14,7 +14,8 @@ Then I translated into English and Ascii code only, so those who use English onl
 
 Notes:
   * right now this tool only fix MA file, no mb file fix, for mb file fix, need to use Maya autodesk tool
-  * https://apps.autodesk.com/MAYA/en/Detail/Index?id=8637238041954239715&os=Win64&appLang=en
+  * Maya autodesk tool download: https://apps.autodesk.com/MAYA/en/Detail/Index?id=8637238041954239715&os=Win64&appLang=en
+  * sample code with autodesk tool: https://gist.github.com/zclongpop123/3b3cfb1dde7d347a4ccdd1ad29b1cae2
 
 How to Use Instruction:
   * download the whole package as zip, unpack

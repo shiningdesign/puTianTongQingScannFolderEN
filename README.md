@@ -19,6 +19,6 @@ Notes:
 How to Use Instruction:
   * download the whole package as zip, unpack
   * use the dos Batch file to run as standalone windows tool (need python and pyside installed first)
-  * or drag the install_puTianTongQingScannFolderEN.mel into maya viewport into put on current shelf tool, and run directly inside maya
+  * or drag the install_puTianTongQingScannFolderEN.mel into maya viewport to put on current shelf tool, and run directly inside maya
   * example is inside the notes
   

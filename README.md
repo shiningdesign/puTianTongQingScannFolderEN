@@ -23,3 +23,6 @@ How to Use Instruction:
   * or drag the install_puTianTongQingScannFolderEN.mel into maya viewport to put on current shelf tool, and run directly inside maya
   * example is inside the notes
   
+Final Notes:
+  * as mostly likely some bad guys with improve the virus code for fun, and circle it around for future, you probaly need to keep update the tool to make it up to date without future similar virus, as there may be so many alternative way of writting it, so those Keyword detection method may not one for all.
+  * currently, this version is detect by check scriptNode with content having fopen/fprint/fclose words, bascially, those scriptNode trying to writing something into your file, which doesn't make sense for a normal scriptNode, so it detects by that pattern

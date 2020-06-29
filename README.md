@@ -1,4 +1,4 @@
-# puTianTongQingScannFolderEN
+# puTianTongQingScannFolderEN based on original 20200623 Chinese version from HongLi
 the English ascii code translated version of Maya Mel PuTianTongQing virus scan and clean tool from honglianimation.com, 
 and I added one drag and drop install.mel file for easy maya install onto shelf, and I also added one auto launch dos cmd file for easy launch from desktop. 
 also I added a scanner icon for it (it shows in Maya shelf and you need to setup your own for batch shortcut icon). 

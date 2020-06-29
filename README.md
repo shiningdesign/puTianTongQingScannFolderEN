@@ -24,5 +24,5 @@ How to Use Instruction:
   * example is inside the notes
   
 Final Notes:
-  * as mostly likely some bad guys will improve the virus code for fun, and circle it around for future, you probaly need to keep updating the tool to make it up to date with those future similar virus, as there may be so many alternative ways of writing it, thus those Keyword detection method may not fit one for all.
+  * as mostly likely some bad guys will improve the virus code for fun, and circle it around for future, you probaly need to keep updating the tool to make it up to date with those future similar virus, as there may be so many alternative ways of writing it, thus those Keyword detection method may not fit once for all.
   * currently, this version is detecting by check scriptNode with content having fopen/fprint/fclose words, bascially, those scriptNode trying to writing something into your file, which doesn't make sense for a normal scriptNode, so it detects by that pattern

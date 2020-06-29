@@ -6,7 +6,8 @@ also I added a scanner icon for it (it shows in Maya shelf and you need to setup
 
 It is based on this article, 
 https://mp.weixin.qq.com/s/uoPPLvE_8LNKlOcHxkeRxw
-
+more info
+https://mp.weixin.qq.com/s/Y12SquhWU3CLK8GXVNCOjg
 and the tool is orginally in Chinese, and download from here:
 www.honglianimation.com/res/pttq.zip
 

@@ -6,9 +6,10 @@ v1.2: (2021.03.10)
   * add more bad word detection and support generic file detection and fix for future Maya virus
 
 In DoScanFile function, I add ban_word_list, so it can support more generic file accesing Maya virus detection, and it also support fix the 2nd wave of Maya "virus", which was designed to use "virus" method to fix origianl puTianTongQing virus. in which it will warns your file no issue by printing Chinese line "贼健康"
-'''
+
+```
 ban_word_list = ['PuTianTongQing','fopen','fprint','fclose','with open','.write','makedirs','shutil','copyfile']
-'''
+```
 
 Detail by the 2nd "virus" author (顶天立地智慧大将军): https://mp.weixin.qq.com/s/lFcsQjQdjVbMNgprdIEvLw
 

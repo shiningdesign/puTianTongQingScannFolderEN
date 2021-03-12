@@ -10,9 +10,13 @@ http://www.honglianimation.com/res/pttq.zip
 
 note:
 https://mp.weixin.qq.com/s/0Wxru1Flyxn2XRwofETM5A
+
+mod:
+v1.2: (2021.03.10)
+  * add more bad word detection
 '''
 
-__version__ = '20200623.0'
+__version__ = '20200623.0.mod.v2'
 
 import sys, os, subprocess, json,time,datetime, glob, tempfile
 import getpass, platform
@@ -163,12 +167,14 @@ def DoScanFile(maPath,tryFix,logPath,skipLog, uiAddVirusCallback=lambda filePath
         lines = f.readlines()
         lenLines = len(lines)
         errLine = []
+        ban_word_list = ['PuTianTongQing','fopen','fprint','fclose','with open','.write','makedirs','shutil','copyfile']
         for mm in range(lenLines):
             if lines[mm].count('createNode script -n "'):
                 #fopen  fprint  fcloseif all appear, means been infected
                 isFopen = 0
                 isFprint = 0
                 isFclose = 0
+                has_ban_word = 0
                 #print '-------------start---------------'
                 errLine.append(mm)
                 tt = mm + 1
@@ -176,26 +182,36 @@ def DoScanFile(maPath,tryFix,logPath,skipLog, uiAddVirusCallback=lambda filePath
                     isError = IsHaveKeyword(lines[tt])
                     if isError:
                         errFile = 1
+                    '''
                     if lines[tt].count('fopen'):
                         isFopen = 1
                     if lines[tt].count('fprint'):
                         isFprint = 1
                     if lines[tt].count('fclose'):
                         isFclose = 1
+                    '''
+                    
+                    for ban_word in ban_word_list:
+                        if lines[tt].count(ban_word):
+                            has_ban_word = 1
+                            break
                     errLine.append(tt)
                     tt = tt + 1
                     if tt>=lenLines:
                         break
                 if errFile == 0:
-                    if isFopen == 1 and isFprint == 1 and isFclose == 1:
-                        print('have fopen  fprint  fclose')
+                    # if isFopen == 1 and isFprint == 1 and isFclose == 1:
+                    if has_ban_word == 1:
+                        # print('have fopen  fprint  fclose')
+                        print('have unsafe operation word')
                         errFile = 1
         f.close()
         if tryFix and errFile:
             if errLine:
                 #before repair, back up with this extension.putiantongqing
                 copyFrom = maPath
-                copyTo = maPath+'.putiantongqing'
+                # copyTo = maPath+'.putiantongqing'
+                copyTo = maPath+'_issueTmp'
                 shutil.copy(copyFrom,copyTo)
                 file_stat = os.stat(copyFrom)
                 os.utime(copyTo, (file_stat[ST_CTIME], file_stat[ST_MTIME]))

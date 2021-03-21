@@ -13,7 +13,7 @@ ban_word_list = ['PuTianTongQing','fopen','fprint','fclose','with open','.write'
 
 Detail by the 2nd "virus" author (顶天立地智慧大将军): https://mp.weixin.qq.com/s/lFcsQjQdjVbMNgprdIEvLw
 
-Due Maya binary nature, this tool only support MA text file, for binary file, you have to use my other tool SuperManScan to do scan and fix in Maya and slow due to loading all content inside Maya to to clean, (will release soon)
+Due Maya binary nature, this tool only support MA text file, for binary file, you have to use my other tool SuperManScan to do scan and fix in Maya and slow due to loading all content inside Maya to to clean, https://github.com/shiningdesign/SuperManCheck/
 
 # puTianTongQingScannFolderEN based on original 20200623 Chinese version from HongLiAnimation
 
